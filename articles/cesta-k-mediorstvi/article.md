@@ -8,11 +8,11 @@ author:
 date: 2024-03-17
 ---
 
-Jak se z juniro stát medioerm? Otázka za milion, na kterou časem narazí asi každý absolvent podobných rekvalifikačních kurzů. Máme za sebou intenzivní kurz, kde jsme se toho objektivně hodně naučili. Nastupujeme do nové práce na juniorskou pozici a snažíme se plnit úkoly, co dosteneme. Někdy se s nimi trápíme méně, někdy více, a kolem sebe akorát vidíme ty mega drsné seniory, kteří naši práci zvládnou o dost rychleji a často i líp. Možná jste se stejně jako já potom ptali: “Bude ze mě někdy taky takovýhle borec? To si vůbec nedokážu přestavit. Oproti nim nic neumím.”
+Jak se z juniora stát mediorem? Otázka za milion, na kterou časem narazí asi každý absolvent podobných rekvalifikačních kurzů. Máme za sebou intenzivní kurz, kde jsme se toho objektivně hodně naučili. Nastupujeme do nové práce na juniorskou pozici a snažíme se plnit úkoly, co dostaneme. Někdy se s nimi trápíme méně, někdy více, a kolem sebe akorát vidíme ty mega drsné seniory, kteří naši práci zvládnou o dost rychleji a často i líp. Možná jste se stejně jako já potom ptali: “Bude ze mě někdy taky takovýhle borec? To si vůbec nedokážu přestavit. Oproti nim nic neumím.”
 
 ::fig{src=assets/monkeyuser.png}
 
-Bylo by krásné vám teď říct: *“Nezoufejte! Tady je pět kroků, jak se stát stát mediorem snadno a rychle!”* To vám ale bohužel neposkytnu, protože sama s imposter syndromem a pochybnostmi o sobě samé neustále zápasím. Co ale můžu udělat, je popsat vám svůj osobní příběh a dát pár tipů na to, co pomohlo mně a dostalo mě do pozice, kdy si říkám, že už možná vlastně nejsem junior a můžu být pyšná na svůj progress. A uvidíme, snad přesvědčím i vás, že to půjde a je jenom otázka času než pro někoho budete “borci” vy. 
+Bylo by krásné vám teď říct: *“Nezoufejte! Tady je pět kroků, jak se stát mediorem snadno a rychle!”* To vám ale bohužel neposkytnu, protože sama s imposter syndromem a pochybnostmi o sobě samé neustále zápasím. Co ale můžu udělat, je popsat vám svůj osobní příběh a dát pár tipů na to, co pomohlo mně a dostalo mě do pozice, kdy si říkám, že už možná vlastně nejsem junior a můžu být pyšná na svůj progress. A uvidíme, snad přesvědčím i vás, že to půjde a je jenom otázka času než pro někoho budete “borci” vy. 
 
 ### V tomhle projektu se v životě nevyznám aneb skok z bezpečných osobních projektů do skutečného světa
 
