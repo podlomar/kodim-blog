@@ -31,7 +31,7 @@ Slovem _data_ v tomto případě rozumíme cokoliv, co se dá uložit do nějak�
 - spustitelné programy a knihovny (DLL, EXE, SO...),
 - a spousta dalšího.
 
-Hlavní myšlenka ukládání dat v počítači spočívá v tom, že počítačová paměť je v zásadě velká krabice na čísla. Všechno, co se do ní ukládá, se tak musí nakonec nějakým způsobem převést na posloupnost relativně malých čísel. Každé takové číslo musí být v rozmezí 0 - 255, aby se vešlo do jedné paměťové buňky. Takovému číslu říkáme :term{en=byte cs=bajt}.
+Hlavní myšlenka ukládání dat v počítači spočívá v tom, že počítačová paměť je v zásadě velká krabice na čísla. Všechno, co se do ní ukládá, se tak musí nakonec nějakým způsobem převést na posloupnost relativně malých čísel. Každé takové číslo musí být v rozmezí 0&nbsp;-&nbsp;255, aby se vešlo do jedné paměťové buňky. Takovému číslu říkáme :term{en=byte cs=bajt}.
 
 Proč je rozsah jednoho bajtu jen 0&nbsp;-&nbsp;255 si řekneme v dalším díle této série. Předtím alespoň naznačíme, jak se různé druhy dat převedou na bajty a do detailu se každému formátu budeme věnovat v dalších článcích.
 
@@ -53,7 +53,7 @@ Když se zadíváte pozorně, možná si všimnete, že každý pixel se sklád�
 
 ::fig{src=assets/barevne-slozky.jpg}
 
-Barvu pixelu tak můžeme popsat pomocí tří čísel, které určují, jak moc má svítit jeho červená, zelená a modrá část. Ano, ohodli jste: každou barevnou složku zakódujeme do jedhono bajtu, tedy jako číslo v rozsahu 0 - 255. Tomuto rozpětí už nikdy neunikneme.
+Barvu pixelu tak můžeme popsat pomocí tří čísel, která určují, jak moc má svítit jeho červená, zelená a modrá část. Ano, uhodli jste: každou barevnou složku zakódujeme do jednoho bajtu, tedy jako číslo v rozsahu 0&nbsp;-&nbsp;255. Tomuto rozpětí už nikdy neunikneme.
 
 Samozřejmě čím více pixelů použijeme, tím detailnější budeme mít obraz. Příklad různých rozlišení je vidět na následujícím obrázku:
 
@@ -91,7 +91,7 @@ Takto by například vypadala zvuková vlna rozsekaná do 8&nbsp;000 vzorků za 
 
 Toto určitě není moc dobrá kvalita zvuku. Porovnejte [hlas Morgana Freemana](assets/freeman.mp3) v originální kvalitě a v kvalitě [8&nbsp;000 vzorků za sekundu](assets/freeman2.mp3).
 
-Kdybychom chtěli kvalitnější vzuk, můžeme zvýšit vzorkovací frekvenci na 16&nbsp;000 vzorků za sekundu:
+Kdybychom chtěli kvalitnější zvuk, můžeme zvýšit vzorkovací frekvenci na 16&nbsp;000 vzorků za sekundu:
 
 ::fig{src=assets/sampling2.png}
 
