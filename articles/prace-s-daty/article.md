@@ -41,7 +41,7 @@ U textových dat máme úkol zdánlivě docela snadný. Každý kousek textu se 
 
 ::fig{src=assets/jelen.png}
 
-Samozřejmě, skutečný život není nikdy tak jednoduchý a rád nám hází klacky pod nohy. Různé světové jazyky používají různé podivné znaky jako třeba `č`, `ř`, `ö`, `ß`, `ç`, `þ` a to jsme ještě ani nezavítali do Ćíny nebo Japonska. Celosvětově je znaků tolik, že by se nám do rozsahu 0 - 255 rozhodně nevešly. Tento problém se snaží řešit různé způsoby kódování znaků jako ASCII nebo UTF-8, na které si posvítíme v dalších článcích.
+Samozřejmě, skutečný život není nikdy tak jednoduchý a rád nám hází klacky pod nohy. Různé světové jazyky používají různé podivné znaky jako třeba `č`, `ř`, `ö`, `ß`, `ç`, `þ` a to jsme ještě ani nezavítali do Číny nebo Japonska. Celosvětově je znaků tolik, že by se nám do rozsahu 0 - 255 rozhodně nevešly. Tento problém se snaží řešit různé způsoby kódování znaků jako ASCII nebo UTF-8, na které si posvítíme v dalších článcích.
 
 ## Obrázky
 
@@ -100,3 +100,7 @@ nebo na 32&nbsp;000 vzorků za sekundu:
 ::fig{src=assets/sampling3.png}
 
 Pro slušnou kvalitu bychom ale chtěli mít alespoň 44&nbsp;100 vzorků za sekundu a dva bajty na vzorek. To je kvalita, kterou používají například audio&nbsp;CD. Pokud máme stereo nahrávku v této kvalitě, zabere jedna minuta zvuku cca 10&nbsp;MB paměti. To je sice mnohem méně než u videa, ale stále je to docela dost. Proto se i zvukové soubory komprimují, například do formátu MP3.
+
+## Závěr
+
+Všechny základní druhy dat jsme proletěli jen tak letem světem, abyste si vytvořili nějaké úplně základní povědomí o tom, co všechno se při ukládání a přenášení dat řeší za problémy. V dalším díle se podíváme hlouběji na bity a bajty a konečně se dozvíte, co je to ta hexadecimální soustava a proč se třeba kódy barev v HTML píší jako `#a2c4d5`.
