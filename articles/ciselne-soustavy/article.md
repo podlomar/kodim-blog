@@ -56,7 +56,7 @@ Celkově tedy číslo 3275 můžeme rezepsat jako 3 × 1000 + 2 × 100 + 7 × 10
 
 Moravané jsou lidé výjimečné tvořiví a také zákeřní. Zavedli proto počítání ve _dvanáctkové soustavě_, kde se naopak všechno točí kolem čísla 12. Pro takový způsob počítání je potřeba umět jedním znakem napsat nejen čísla 0 až 9, ale také 10 a 11. Tyto znaky by mělo být snadné napsat a zároveň by se neměly snadno splést s žádným jiným běžně používaným znakem nebo písmenem.
 
-Moravané se po dlouhých diskuzích dohodli, že si vypůjčí znaky z Arménské abecedy. Pro čísla 10 použili znak "vo" `Ո`, pro 11 znak "et" `Ը`. Tyto znaky mají také výhodu v tom, že se dají hezky zobrazit na digitálních displejích.
+Moravané se po dlouhých diskuzích dohodli, že si vypůjčí znaky z Arménské abecedy. Pro číslo 10 použili znak "vo" `Ո`, pro 11 znak "et" `Ը`. Tyto znaky mají také výhodu v tom, že se dají hezky zobrazit na digitálních displejích.
 
 ::fig{src=assets/digits.png}
 
