@@ -38,7 +38,7 @@ Vezměme třeba takové úplně obyčejné číslo 3275. Když jej čteme zleva 
 - sedmdesát, tedy 7 × 10
 - pět, tedy 5 × 1
 
-Cifry na jednotlivých pozicích představují každá jiný _řád_. Zprava doleva jsou to jednotky, desítky, stovky, tisíce a tak dále. Každý řád je vždy nějaká mocnina čísla 10. Například stovka je 10^2^ = 10 × 10, tisíc je 10^3^ = 10 × 10 × 10. Všechny řády a jejich názvy jsou v tabulce níže.
+Cifry na jednotlivých pozicích představují každá jiný _řád_. Zprava doleva jsou to jednotky, desítky, stovky, tisíce a tak dále. Každý řád je vždy nějaká mocnina čísla 10. Například stovka je 10^2^ = 10 × 10, tisíc je 10^3^ = 10 × 10 × 10. Prvních několik řádů a jejich názvy vidíte v tabulce níže.
 
 | Mocnina | Celkem    | Název       |
 |---------|-----------|-------------|
@@ -54,7 +54,7 @@ Celkově tedy číslo 3275 můžeme rezepsat jako 3 × 1000 + 2 × 100 + 7 × 10
 
 ## Počítání do dvanacti
 
-V předchozím výkladu se všechno točilo kolem čísla deset. Moravané jsou však lidé výjimečné tvořiví a také zákeřní. Zavedli proto počítání ve _dvanáctkové soustavě_, kde se naopak všechno točí kolem čísla 12. Pro takový způsob počítání je potřeba umět jedním znakem napsat nejen čísla 0 až 9, ale také 10 a 11. Tyto znaky by mělo být snadné napsat a zároveň by se neměly snadno splést s žádným jiným běžně používaným znakem nebo písmenem.
+Moravané jsou lidé výjimečné tvořiví a také zákeřní. Zavedli proto počítání ve _dvanáctkové soustavě_, kde se naopak všechno točí kolem čísla 12. Pro takový způsob počítání je potřeba umět jedním znakem napsat nejen čísla 0 až 9, ale také 10 a 11. Tyto znaky by mělo být snadné napsat a zároveň by se neměly snadno splést s žádným jiným běžně používaným znakem nebo písmenem.
 
 Moravané se po dlouhých diskuzích dohodli, že si vypůjčí znaky z Arménské abecedy. Pro čísla 10 použili znak "vo" `Ո`, pro 11 znak "et" `Ը`. Tyto znaky mají také výhodu v tom, že se dají hezky zobrazit na digitálních displejích.
 
