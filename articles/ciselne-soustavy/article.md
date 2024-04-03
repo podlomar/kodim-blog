@@ -5,7 +5,7 @@ author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
   avatar: https://avatars.githubusercontent.com/u/4608335
-date: 2024-04-02
+date: 2024-04-03
 ---
 
 Toto je druhý díl série článků o tom, jak se ukládají a přenášejí data mezi počítači. V [prvním díle](/blog/clanky/prace-s-daty) jsme si letem světem pověděli o tom, jak všechna data v počítači jsou v zásadě jen kupa čísel. Teď přišel čas na malou oddechovou pohádku o číselných soustavách, než se naplno vrhneme do hlubin nul a jedniček, bitů a bajtů.
