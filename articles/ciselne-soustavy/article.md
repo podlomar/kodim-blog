@@ -11,7 +11,7 @@ draft: true
 
 Toto je druhý díl série článků o tom, jak se ukládají a přenášejí data mezi počítači. V [prvním díle](/blog/clanky/prace-s-daty) jsme si letem světem pověděli o tom, jak všechna data v počítači jsou v zásadě jen kupa čísel. Teď přišel čas na malou oddechovou pohádku o číselných soustavách, než se naplno vrhneme do hlubin nul a jedniček, bitů a bajtů.
 
-Pokud už něco a číselných soustavách víte například ze školy nebo z profesní zkušenosti, tento článek pro vás nejspíš bude jen takové osvěžení pojmů. Pokud naopak vůbec netušíte, která bije, náš malý příběh vám snad ulehčí vstup do oblasti, která je jinak už lehce abstraktní a je v ní, hrůzo, hrůzo, potřeba i malinká špetka matematiky.
+Pokud už něco a číselných soustavách víte, například ze školy nebo z profesní zkušenosti, tento článek pro vás nejspíš bude jen takové osvěžení pojmů. Pokud naopak vůbec netušíte, která bije, náš malý příběh vám snad ulehčí vstup do oblasti, která je jinak už lehce abstraktní a je v ní, hrůzo, hrůzo, potřeba i malinká špetka matematiky.
 
 ## Pohádka začíná
 
@@ -149,7 +149,7 @@ Nápad počítat ve dvanáctkové soustavě může na první počtení působit 
 - hodina má 60 minut a minuta 60 sekund, což je 5 × 12,
 - hudební stupnice má 12 tónů.
 
-Rozdělení časových jednotek na dvanáct dílů pochází od starých Egypťanů, kteří v té době opravdu používali dvanáctkovou soustavu a počítali pomocí článků na prstech jedné ruky. Es
+Rozdělení časových jednotek na dvanáct dílů pochází od starých Egypťanů, kteří v té době opravdu používali dvanáctkovou soustavu a počítali pomocí článků na prstech jedné ruky.
 
 V principu nám nic nebrání mít číselnou soustavu o libovolném základu. Například postavičky ze seriálu Simpsonovi mají prokazatelně na rukou pouze čtyři prsty, takže by se jim určitě hodila osmičková soustava místo desítkové. Kdyby naopak počítali články prstů jako Egypťané, měli by soustavu devítkovou.
 
