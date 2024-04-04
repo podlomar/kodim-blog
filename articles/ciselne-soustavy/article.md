@@ -34,7 +34,7 @@ Všimněte si, že pro číslo deset už nemáme žádný jednociferný znak a n
 Vezměme třeba takové úplně obyčejné číslo 3275. Když jej čteme zleva doprava, máme
 
 - tři tisíce, tedy 3 × 1000
-- dvěstě, tedy 2 × 100
+- dvě stě, tedy 2 × 100
 - sedmdesát, tedy 7 × 10
 - pět, tedy 5 × 1
 
@@ -54,7 +54,7 @@ Celkově tedy číslo 3275 můžeme rezepsat jako 3 × 1000 + 2 × 100 + 7 × 10
 
 ## Počítání do dvanácti
 
-Moravané jsou lidé výjimečné tvořiví a také zákeřní. Zavedli proto počítání ve _dvanáctkové soustavě_, kde se naopak všechno točí kolem čísla 12. Pro takový způsob počítání je potřeba umět jedním znakem napsat nejen čísla 0 až 9, ale také 10 a 11. Tyto znaky by mělo být snadné napsat a zároveň by se neměly snadno splést s žádným jiným běžně používaným znakem nebo písmenem.
+Moravané jsou lidé výjimečně tvořiví a také zákeřní. Zavedli proto počítání ve _dvanáctkové soustavě_, kde se naopak všechno točí kolem čísla 12. Pro takový způsob počítání je potřeba umět jedním znakem napsat nejen čísla 0 až 9, ale také 10 a 11. Tyto znaky by mělo být snadné napsat a zároveň by se neměly snadno splést s žádným jiným běžně používaným znakem nebo písmenem.
 
 Moravané se po dlouhých diskuzích dohodli, že si vypůjčí znaky z Arménské abecedy. Pro číslo 10 použili znak "vo" `Ո`, pro 11 znak "et" `Ը`. Tyto znaky mají také výhodu v tom, že se dají hezky zobrazit na digitálních displejích.
 
@@ -103,9 +103,9 @@ Co se týče slov pro jednotlivá čísla, při počítání se hezky vyslovuje 
 | ԸԸ    | jedintucet jedin | 143       |
 | 100   | gros             | 144       |
 
-S čísel ve dvanáctkové soustavě se vám ze začátku může pořádně zatočit hlava. Je potřeba si zvyknout na to, že po čísle 9 (devět) vždy následuje ještě číslo Ո (deset) a po něm Ը (jedin). Až pak se dostaneme k prvnímu dvojcifernému číslu, které se sice píše 10, ale znamneá "tucet". Analogicky pak po čísle ԸԸ (jedintucet jedin) následuje první trojciferné číslo 100, které Moravané pojmenovali "gros", protože jim české slovo "veletucet" bylo příliš dlouhé.
+Z čísel ve dvanáctkové soustavě se vám ze začátku může pořádně zatočit hlava. Je potřeba si zvyknout na to, že po čísle 9 (devět) vždy následuje ještě číslo Ո (deset) a po něm Ը (jedin). Až pak se dostaneme k prvnímu dvojcifernému číslu, které se sice píše 10, ale znamneá "tucet". Analogicky pak po čísle ԸԸ (jedintucet jedin) následuje první trojciferné číslo 100, které Moravané pojmenovali "gros", protože jim české slovo "veletucet" bylo příliš dlouhé.
 
-Počítání do dvanácti jinak také vychází s počítání na prstech. Místo jednotlivých prstů však počítáme články prstů mimo palec. 
+Počítání do dvanácti také vychází z počítání na prstech. Místo jednotlivých prstů však počítáme články prstů mimo palec.
 
 ::fig{src=assets/hand12.png}
 
@@ -155,7 +155,7 @@ V principu nám nic nebrání mít číselnou soustavu o libovolném základu. N
 
 ::fig{src=assets/homer.jpg}
 
-Ať už je však náš příběh o souboji Moravy a Čech jakkoliv sugestivní, nakonec asi Moravácí přeci jen převrat neplánují a už vůbec si tajně nehýčkají vlastní číselnou soustavu. U programátorů je však situace jiná. Ve světě software se totiž setkáme minimálně se třemi číselnými soustavami:
+Ať už je však náš příběh o souboji Moravy a Čech jakkoliv sugestivní, nakonec asi Moraváci přeci jen převrat neplánují a už vůbec si tajně nehýčkají vlastní číselnou soustavu. U programátorů je však situace jiná. Ve světě software se totiž setkáme minimálně se třemi číselnými soustavami:
 
 - **Dvojková (Binární soustava)** o základu 2 - používá se pro ukládání a přenos dat úplně ve všech digitálních zařízeních.
 - **Šestnáctková (Hexadecimální soustava)** se základem 16 - používá se pro lidsky čitelný zápis dat. Například barvy v HTML jako `#FFA500` jsou čísla v šestnáctkové soustavě.
