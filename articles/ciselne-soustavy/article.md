@@ -21,7 +21,7 @@ I jednoho dne došla Moravanům trpělivost a odhodlali se k vyhlášení nezáv
 
 ## Počítání do deseti
 
-Před vyhlášením nezávislosti Moravy bylo v Česku, stejně jako ve zbytku civilizovaného světa, obvyklé počítat v takzvané _desítkové soustavě_. To znamená, že všechna čísla se zapisují pomocí deseti číslic od 0 do 9 a počítáme od jedné do deseti. Tento systém historicky souvisí s tím, že lidé mají na rukou deset prstů a tak se jim nejvíce hodilo počítat právě desítkově.
+Před vyhlášením nezávislosti Moravy bylo v Česku, stejně jako ve zbytku světa, obvyklé počítat v takzvané _desítkové soustavě_. To znamená, že všechna čísla se zapisují pomocí deseti číslic od 0 do 9 a počítáme od jedné do deseti. Tento systém historicky souvisí s tím, že lidé mají na rukou deset prstů a tak se jim nejvíce hodilo počítat právě desítkově.
 
 ::fig{src=assets/hands10.png}
 
@@ -90,7 +90,7 @@ Co se týče slov pro jednotlivá čísla, při počítání se hezky vyslovuje 
 | 2Ո    | dvatucet deset   | 34        |
 | 2Ը    | dvatucet jedin   | 35        |
 | 30    | třitucet         | 36        |
-| 31    | třitucet jedna   | 36        |
+| 31    | třitucet jedna   | 37        |
 | ...   | ...              | ...       |
 | Ո9    | desettucet devět | 129       |
 | ՈՈ    | desettucet deset | 130       |
@@ -115,15 +115,15 @@ Pro další výklad začíná být nešikovné, že některá čísla ve dvanác
 
 Moravané rozhodně nejsou pozadu se jmény pro jednotlivé řády. Jen místo mocniny deseti používají mocniny dvanácti. Názvy řádů ve dvanáctkové soustavě vymysleli takto:
 
-| Mocnina | Desítkově | Dvanáctkově | Název  |
-|---------|-----------|-------------|--------|
-| 12^0^   | 1         | 1₁₂         | jedna  |
-| 12^1^   | 12        | 10₁₂        | tucet  |
-| 12^2^   | 144       | 100₁₂       | gros   |
-| 12^3^   | 1 728     | 1 000₁₂     | kámen  |
-| 12^4^   | 20 736    | 10 000₁₂    | kopec  |
-| 12^5^   | 248 832   | 100 000₁₂   | ranec  |
-| 12^6^   | 2 985 984 | 1 000 000₁₂ | meloun |
+| Mocnina | Dvanáctkově | Desítkově | Název  |
+|---------|-------------|-----------|--------|
+| 12^0^   | 1₁₂         | 1         | jedna  |
+| 12^1^   | 10₁₂        | 12        | tucet  |
+| 12^2^   | 100₁₂       | 144       | gros   |
+| 12^3^   | 1 000₁₂     | 1 728     | kámen  |
+| 12^4^   | 10 000₁₂    | 20 736    | kopec  |
+| 12^5^   | 100 000₁₂   | 248 832   | ranec  |
+| 12^6^   | 1 000 000₁₂ | 2 985 984 | meloun |
 
 Vezměme si tak třeba číslo 1Ո8Ը₁₂, což přečteme jako "kámen deset grosů osmtucet jedin". Toto číslo se rozloží jako:
 
@@ -155,11 +155,11 @@ V principu nám nic nebrání mít číselnou soustavu o libovolném základu. N
 
 ::fig{src=assets/homer.jpg}
 
-Ať už je však náš příběh o souboji Moravy a Čech jakkoliv sugestivní, nakonec asi Moravácí přeci jen převrat neplánují a už vůbec si tajně nahýčkají vlastní číselnou soustavu. U programátorů je však situace jiná. Ve světě software se totiž setkáme minimálně se třemi číselnými soustavami:
+Ať už je však náš příběh o souboji Moravy a Čech jakkoliv sugestivní, nakonec asi Moravácí přeci jen převrat neplánují a už vůbec si tajně nehýčkají vlastní číselnou soustavu. U programátorů je však situace jiná. Ve světě software se totiž setkáme minimálně se třemi číselnými soustavami:
 
 - **Dvojková (Binární soustava)** o základu 2 - používá se pro ukládání a přenos dat úplně ve všech digitálních zařízeních.
 - **Šestnáctková (Hexadecimální soustava)** se základem 16 - používá se pro lidsky čitelný zápis dat. Například barvy v HTML jako `#FFA500` jsou čísla v šestnáctkové soustavě.
-- **Čtyřiašedesátková (base64)** se základem 64 - používá se pro kódování binárních dat do textové podoby. Například identifikátor videa na YouTube jako `dQw4w9WgXcQ`, který vidíte v URL adrese, je číslo v čtyřiašedesátkové soustavě. Schválně zkuste toto video na YouTube najít.
+- **Čtyřiašedesátková (base64)** se základem 64 - používá se pro kódování binárních dat do textové podoby. Například identifikátor videa na YouTube jako [dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ), který vidíte v URL adrese, je číslo v čtyřiašedesátkové soustavě.
 
 O dvojkové a šestnáctkové soustavě si podrobně povíme v dalším dílu této série. Dozvíte se, co jsou to bity, bajty, nuly a jedničky a proč vlastně má smysl tomuhle všemu aspoň trošku rozumět. 
 
@@ -169,4 +169,4 @@ O dvojkové a šestnáctkové soustavě si podrobně povíme v dalším dílu t�
 - [Dozenal Society](http://www.dozenalsociety.org.uk) - stránky spolku, který s lehkou nadsázkou ale i docela vážně podporuje přechod na dvanáctkovou soustavu v našem běžném životě. Pro čísla 10 a 11 používají znaky převrácené 2 a 3, které ale většina fontů nepodporuje.
 - [Duodecimal system](https://en.wikipedia.org/wiki/Duodecimal) - obsáhlý článek na anglické Wikipedii o dvanáctkové soustavě, který také shrnuje všemožné historické návrhy znaků pro čísla 10 a 11.
 
-Tento článek vznikl s pomocí skupiny autorů [Cynické Hyeny](https://cynickehyeny.cz), kteří s neotřelým nadhledem komentují aktuální dění ve světě.
+Tento článek vznikl s pomocí skupiny autorů [Cynické Hyeny](https://cynickehyeny.cz), kteří neotřele a nevybíravě komentují aktuální dění nejen ve světě.
