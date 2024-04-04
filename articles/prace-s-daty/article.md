@@ -103,4 +103,4 @@ Pro slušnou kvalitu bychom ale chtěli mít alespoň 44&nbsp;100 vzorků za sek
 
 ## Závěr
 
-Všechny základní druhy dat jsme proletěli jen tak letem světem, abyste si vytvořili nějaké úplně základní povědomí o tom, co všechno se při ukládání a přenášení dat řeší za problémy. V dalším díle se podíváme hlouběji na bity a bajty a konečně se dozvíte, co je to ta hexadecimální soustava a proč se třeba kódy barev v HTML píší jako `#a2c4d5`.
+Všechny základní druhy dat jsme proletěli jen tak letem světem, abyste si vytvořili nějaké úplně základní povědomí o tom, co všechno se při ukládání a přenášení dat řeší za problémy. V [dalším díle](/blog/clanky/ciselne-soustavy) se pořádně podíváme na číselné soustavy, abychom si připravili půdu pro bity a bajty, nuly a jedničky.
