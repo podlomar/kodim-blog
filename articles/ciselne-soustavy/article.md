@@ -162,3 +162,8 @@ Ať už je však náš příběh o souboji Moravy a Čech jakkoliv sugestivní, 
 - **Čtyřiašedesátková (base64)** se základem 64 - používá se pro kódování binárních dat do textové podoby. Například identifikátor videa na YouTube jako `dQw4w9WgXcQ`, který vidíte v URL adrese, je číslo v čtyřiašedesátkové soustavě. Schválně zkuste toto video na YouTube najít.
 
 O dvojkové a šestnáctkové soustavě si podrobně povíme v dalším dílu této série. Dozvíte se, co jsou to bity, bajty, nuly a jedničky a proč vlastně má smysl tomuhle všemu aspoň trošku rozumět. 
+
+## Další informace
+
+- [A brief history of numerical systems](https://www.youtube.com/watch?v=cZH0YnFpjwU) - krátké video od TED-Ed o historii počítání a číselných soustav
+- [Dozenal Society](http://www.dozenalsociety.org.uk) - stránky spolku, který s lehkou nadsázkou ale i docela vážně podporuje přechod na dvanáctkovou soustavu v našem světe. Používají jiné zavedenější znaky pro čísla 10 a 11, a to `↊` a `↋`.
