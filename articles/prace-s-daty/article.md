@@ -45,7 +45,7 @@ Samozřejmě, skutečný život není nikdy tak jednoduchý a rád nám hází k
 
 ## Obrázky
 
-Při kódování obrázků využijeme toho, že počítačové monitory zobrzují obraz pomocí malých barevných bodů, které nazýváme _pixely_. Každý pixel je malý čtvereček, který může mít libovolnou barvu. Toto je například macro fotografie ikonky tohoto webu na monitoru počítače:
+Při kódování obrázků využijeme toho, že počítačové monitory zobrazují obraz pomocí malých barevných bodů, které nazýváme _pixely_. Každý pixel je malý čtvereček, který může mít libovolnou barvu. Toto je například macro fotografie ikonky tohoto webu na monitoru počítače:
 
 ::fig{src=assets/pixely.jpg}
 
