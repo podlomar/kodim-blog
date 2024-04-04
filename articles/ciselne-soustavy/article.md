@@ -166,4 +166,7 @@ O dvojkové a šestnáctkové soustavě si podrobně povíme v dalším dílu t�
 ## Další informace
 
 - [A brief history of numerical systems](https://www.youtube.com/watch?v=cZH0YnFpjwU) - krátké video od TED-Ed o historii počítání a číselných soustav
-- [Dozenal Society](http://www.dozenalsociety.org.uk) - stránky spolku, který s lehkou nadsázkou ale i docela vážně podporuje přechod na dvanáctkovou soustavu v našem světe. Používají jiné zavedenější znaky pro čísla 10 a 11, a to `↊` a `↋`.
+- [Dozenal Society](http://www.dozenalsociety.org.uk) - stránky spolku, který s lehkou nadsázkou ale i docela vážně podporuje přechod na dvanáctkovou soustavu v našem běžném životě. Pro čísla 10 a 11 používají znaky převrácené 2 a 3, které ale většina fontů nepodporuje.
+- [Duodecimal system](https://en.wikipedia.org/wiki/Duodecimal) - obsáhly článek na Wikipedii o dvanáctkové soustavě, který také obsahuje všemožné historické návrhy znaků pro čísla 10 a 11.
+
+Tento článek vznikl s pomocí skupiny autorů [Cynické Hyeny](https://cynickehyeny.cz), kteří s neotřelým nadhledem komentují aktuální dění ve světě.
