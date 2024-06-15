@@ -6,7 +6,6 @@ author:
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
   avatar: https://avatars.githubusercontent.com/u/4608335
 date: 2024-06-15
-draft: true
 ---
 
 Tento článek je třetím dílem několikadílné série pro začínající programátory o tom, jak počítače pracují s daty.
