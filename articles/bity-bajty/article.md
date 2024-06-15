@@ -5,7 +5,7 @@ author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
   avatar: https://avatars.githubusercontent.com/u/4608335
-date: 2024-06-12
+date: 2024-06-15
 draft: true
 ---
 
@@ -14,35 +14,38 @@ Tento článek je třetím dílem několikadílné série pro začínající pro
 - [V prvním díle](https://kodim.cz/blog/clanky/prace-s-daty) jste se dozvěděli, že všechny možné druhy dat jsou vždy jen hromady malých čísel.
 - [Ve druhém díle](https://kodim.cz/blog/clanky/ciselne-soustavy) jsme si vyprávěli příběh o číselných soustavách, díky kterému už tušíte, že počítače pracují v jiné soustavě než my lidé.
 
-Máme tak všechno krásně připraveno, abychom se konečně dostali k jádru pudla a podívali se, co se skrývá za často omýlaným tvrzením, že **počítače pracují s nulami a jedničkami**.
+Máme tak všechno krásně přichystáno, abychom se konečně dostali k jádru pudla a rozkryli, co se skrývá za často omýlaným tvrzením, že **počítače pracují s nulami a jedničkami**.
 
 ## Skladování a přenos dat
 
-Když pracujeme se všemi možnými druhy dat, jako jsou texty, obrázky, audio a video, vždycky chceme taková data umět jednak někde skladovat, jednak někam posílat.
+Abyste mohli na svůj Instagram poslat už sedmnáctou dokonale vystylovanou fotečku ze své digitálně nomádské cesty po Kambodži, musíte nejdřív takovou fotku jednak někam uložit, jednak ji nějakou datovou cestou poslat domů. Takhle to nakonec funguje se všemi daty, které na počítačích zpracováváme. Vždy je chceme umět někam uložit a někam přenést.
 
-Na ukládání dat používáme spousty různých technologii, většinu z nich jste jistě už někde potkali:
+::fig[Vytvořeno pomocí [Midjourney](https://www.midjourney.com/home)]{src=assets/nomad.jpg}
+
+Na ukládání dat používáme spousty různých technologii, většinu z nich jste jistě už někde potkali, o některých vám možná povypráví vaši prarodiče:
 
 - operační paměť (RAM) uvnitř počítače, která je velmi rychlá, ale data v ní jsou uložena jen do restartu počítače nebo mobilního telefonu,
 - pevný disk (harddisk), který je pomalejší, ale data na něm zůstávají i po vypnutí počítače,
 - flash paměti vhodné pro fyzické přenášení dat mezi zařízeními,
 - optická média jako CD, DVD nebo Blu-ray disky,
-- dnes už zastaralé způsoby ukládání jako diskety, magnetické pásky nebo dokonce děrné štítky.
+- diskety (zeptejte se rodičů), magnetické pásky nebo dokonce děrné štítky (téma na hovory s babičkou a dědou).
 
-Pokud chceme naopak data přenášet z místa na místo, používáme
+Pokud chceme naopak data efektivně přenášet z místa na místo, používáme
 
 - elektrické vodiče uvnitř počítače pro přenos dat mezi jednotlivými komponentami jako procesor, pamět, grafická karta nebo disk,
 - bezdrátové technologie jako Wi-Fi, Bluetooth nebo mobilní sítě (GSM, 5G),
-- optické kabely pro rychlé přenosy dat v rámci počítačových sítí.
+- optické kabely pro rychlé přenosy dat v rámci počítačových sítí,
+- satelitní spoje pro přenos dat mezi kontinenty (například Starlink od SpaceX),
 
-Teď to skoro vypadá, že vás ze všech těchto technologií čeká nějaká drsná zkouška. Nebojte! Tento výčet uvádíme jen pro představu, jak různorodé všemožné technologie můžou být. Pokud chceme najít dobrý způsob pro kódování dat jak pro ukládání tak pro přenus, musíme vymyslet něco opravdu univerzálního a jednoduchého.
+Teď to skoro vypadá, že vás ze všech těchto technologií čeká nějaká drsná zkouška. Nebojte! Tento výčet uvádíme jen pro představu, jak různorodé všemožné technologie můžou být. Pokud chceme najít dobrý způsob pro kódování dat jak pro ukládání tak pro přenus, musíme vymyslet něco opravdu univerzálního a hlavně jednoduchého.
 
 ## Jedničky a nuly
 
-Teď konečně přichází myšlenka za všechny prachy. Jak už jsme viděli, pro reprezentaci jakýchkoliv dat nám stačí umět zakódovat tato data jako malá čísla. Navíc z našeho příběhu o číselných soustavých víme, že čísla můžeme zapisovat pomocí deseti cifer, ale taky klidně třeba dvanácti jako Moraváci nebo osmi jako Simmpsonovi.
+Teď konečně přichází myšlenka za všechny prachy. Jak už jsme viděli, pro reprezentaci jakýchkoliv dat nám stačí umět zakódovat tato data jako malá čísla. Navíc z našeho lehce ujetého [příběhu o číselných soustavých](https://kodim.cz/blog/clanky/ciselne-soustavy) víme, že čísla můžeme zapisovat pomocí deseti cifer, ale taky klidně třeba dvanácti jako Moraváci nebo osmi jako Simpsonovi.
 
-S odvážným nápadem však už v roce 1689 přišel Německý matematik [Gottfried Wilhelm Leibniz](https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz). Ten v takhle dávných dobách samozřejmě neměl o počítačích ani páru. Stejně ho ale napadlo, že by mohlo být výhodné používat pro reprezentaci čísel **pouze dvě cifry**. Tedy cifry 0 a 1.
+S odvážným nápadem však už v roce 1689 přišel Německý matematik [Gottfried Wilhelm Leibniz](https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz). Ten samozřejmě v samých počátcích osvícenství neměl o počítačích ani páru. I tak jej ale napadlo, že by mohlo být výhodné používat pro reprezentaci čísel **pouze dvě cifry**. Tedy cifry 0 a 1.
 
-::fig{src=assets/leibniz.jpg}
+::fig[Leibnizovy zápisky, credit: [Gottfried Wilhelm Leibniz Bibliothek](http://digitale-sammlungen.gwlb.de/resolve?id=00068252)]{src=assets/leibniz.jpg}
 
 Tím vznikla takzvaná __binární soustava__ nebo také __dvojková soustava__. Funguje na stejných principech jako už známe z desítkové nebo osmičkové soustavy, jen budeme mít cifer zatraceně málo.
 
@@ -95,9 +98,7 @@ Jednomu takovému osmibitovému bloku pak budeme říkat česky _bajt_, anglicky
 
 Pokud si tyto čísla převedeme zpět do znaků získáme už známý text:
 
-```
-Jelenovi pivo nelej!
-```
+::fig{src=assets/jelen.png}
 
 Největší binární číslo, které můžeme zapsat pomocí osmi bitů je 11111111, tedy desítkově 255. Do jednoho bajtu se nám tedy vždy vejde pouze jedno číslo v rozmezí 0 až 255. Konečně tak dostáváme odpověď na otázku, proč jsme už od samého začátku chtěli všechna data rozsekat na malá čísla v rozmezí 0 až 255. 
 
@@ -105,39 +106,46 @@ Největší binární číslo, které můžeme zapsat pomocí osmi bitů je 1111
 
 Kde jsme přišli na to, že osm bitů je ideální délka pro jeden bajt? K tomuto rozhodnutí došlo v polovině 70. let minulého století, kdy společnost IBM začala vyrábět počítač [System/360](https://en.wikipedia.org/wiki/IBM_System/360), což byl první komerční počítač určený jak pro vědecké tak pro podnikové účely. Tehdy v IBM soupeřily dva návrhy na délku bajtů. Jeden návrh byl používat 6 bitů na bajt, druhý návrh byl pro 8 bitů. Nakonec z různých technických důvodů zvítězil návrh s osmi bity.
 
-::fig{src=assets/system-360.jpg}
+::fig[Počítač IBM System/360]{src=assets/system-360.jpg}
 
 Na tomto příkladu je dobře vidět, že přestože informační technologie často považujeme za symbol moderní doby, většina principů, na kterých počítače stojí a fungují, jsou staré více než půl století nebo pocházejí dokonce ze 17. století.
 
 ## Paměťové jednotky
 
-Jak už jsme si řekli na začátku, data chceme jednak ukládat do paměti, jednak přenášet pomocí různých telekomunikančích prostředků. Abychom vyjádřili, kolik dat dokážeme někam uložit nebo poslat, používáme jednotky odvozené od bitů a bajtů.
+Jak už jsme si řekli na začátku, data chceme jednak ukládat do paměti, jednak přenášet pomocí různých telekomunikačích prostředků. Abychom vyjádřili, kolik dat dokážeme někam uložit nebo poslat, používáme jednotky odvozené od bitů a bajtů.
 
-Když data ukládáme do paměti, jako základní jednotkou používáme jeden bajt. Tuto jednotku značíme velkým písmenem B. Pro větší objemy dat pak používáme násobky jako kB (kilobajt), MB (megabajt) nebo GB (gigabajt). Teď je ovšem třeba se připravit na pořádny podraz. Z běžného žívota jsem zvyklí, že kilometr je tisíc metrů a třeba megawatt je milion wattů. Z technických důvodů souvisejících s adresováním RAM pamětí, se však jeden kilobajt historicky počitá ne jako 1000 bajtů, ale jako 1024 bajtů. Stejně tak jeden megabajt je 1024 kilobajtů a jeden gigabajt je 1024 megabajtů. 
+Když data ukládáme do paměti, jako základní jednotkou používáme jeden bajt. Tuto jednotku značíme velkým písmenem B. Pro větší objemy dat pak používáme násobky jako kB (kilobajt), MB (megabajt) nebo GB (gigabajt). Teď je ovšem třeba se připravit na pořádně zákeřný podraz. Z běžného žívota jsem zvyklí, že kilometr je tisíc metrů a třeba megawatt je milion wattů. Z technických důvodů souvisejících s adresováním RAM pamětí, se však jeden kilobajt historicky počitá ne jako 1000 bajtů ale jako 1024 bajtů. Stejně tak jeden megabajt je 1024 kilobajtů a jeden gigabajt je 1024 megabajtů. 
 
-Když si tedy například do svého počítače koupíte pamět RAM s kapacitou 8 GB, dostanete za své peníze přesně 8 589 934 592 bajtů. 
+Když si tedy například slavnostně do svého počítače koupíte pamět RAM s kapacitou 8 GB, dostanete za své peníze přesně 8&nbsp;589&nbsp;934&nbsp;592 bajtů. 
+
+::fig[Paměťový modul Kingston 8GB DDR4 2666MHz CL19, credit: [Alza.cz](https://www.alza.cz)]{src=assets/ram.jpg}
 
 Zmatení však, milé děti, nekončí. Když totiž data přenášíme po síti, používáme jednotky odvozené od bitů. Základní jednotkou je tedy jeden bit, který značíme malým písmenem b. Pro větší objemy dat pak používáme násobky jako kb (kilobit), Mb (megabit) nebo Gb (gigabit). Lidé od telekomunikací nemusí řešit žádné technologie kolem adresování pamětí, takže většinou počítají jeden kilobit standardně jako 1000 bitů, jeden megabit jako 1000 kilobitů a tak dále. 
 
-Například český operátor Vodafone v době psaní tohoto článku nabízí tři tarify pro domácí internet s rychlostmi 250 Mb/s, 500 Mb/s a 1 Gb/s. To znamená, že v nejpomalejším tarifu můžete přenést 250 000 000 bitů za sekundu. Když toto číslo vydělíme osmi, dostaneme 31 250 000 bajtů za sekundu, což je 31.25 MB/s pokud počítáme v násobcích 1000, nebo 29.8 MB/s pokud počítáme v násobcích 1024.
+Například český operátor Vodafon v době psaní tohoto článku nabízí tři tarify pro domácí internet s rychlostmi 250 Mb/s, 500 Mb/s a 1 Gb/s. To znamená, že v nejpomalejším tarifu můžete přenést 250&nbsp;000&nbsp;000 bitů za sekundu. Když toto číslo vydělíme osmi, dostaneme 31&nbsp;250&nbsp;000 bajtů za sekundu, což je
 
-::fig{src=assets/vodafone.png}
+- 31.25 MB/s pokud počítáme v násobcích 1000, nebo
+- 29.8 MB/s pokud počítáme v násobcích 1024.
 
-Je vidět, že pokud objem dat počítáme v násobcích 1024, přenesová rychlost vypadá menší. Tohoto si už dávno povšimnuli i výrobci pevných disků. Když vyrobí disk o velikosti přesně 1 000 000 000 bajtů, přepočteno podle násobků 1024 by takový disk měl kapacitu 0.93 TB. To se na krabici s novým diskem špatně vyjímá. Takže výrobci pevných disků začali také uvádět kapacitu disků v násobcích 1000, tedy jeden kilobajt počítají jako 1000 bajtů, nikoliv jako 1024.
+::fig[[Stránky společnosti Vodafon](https://www.vodafone.cz/internet), červen 2024]{src=assets/vodafon.png}
+
+Teď bychom mohli být rozumní a pevně stanovit, že pro ukládání dat používáme násobky 1024 a pro přenos dat násobky 1000. Jenže to bychom žili ve světe, kdy jsou všechny bytůstky šťastny.
+
+Vidíme, že pokud počítáme v násobcích 1024, objem dat vypadá menší. Tohoto si už dávno povšimnuli i proradní, krvelační a ziskuchtiví výrobci pevných disků. Když prodávají disk o velikosti přesně 1&nbsp;000&nbsp;000&nbsp;000 bajtů, přepočteno podle násobků 1024 by takový disk měl kapacitu 0.93 TB. To se na krabici s novým diskem špatně marketingově vyjímá. Inu začali tedy také uvádět kapacitu disků v násobcích 1000, tedy jeden kilobajt počítají jako 1000 bajtů, nikoliv jako 1024.
 
 ## Chcete se zbláznit?
 
-Pokud se bavíme o přenosové rychlosti vašeho připojení k interntu, tak tu ovlivňuje asi tak milion různých faktorů. Takže pokud váš operátor avízuje rychlost 31.25 MB/s, a ve skutečnosti je to jen 29.8 MB/s, tak je to vlastně úplně jedno.
+Pokud se bavíme o přenosové rychlosti vašeho připojení k internetu, tak tu ovlivňuje asi tak milion různých faktorů. Takže pokud váš operátor avízuje rychlost 31.25 MB/s, a ve skutečnosti je to jen 29.8 MB/s, tak je to vlastně úplně jedno.
 
 Pokud však jste někdo, kdo chce přesně vyjadřovat objemy dat například v technických nebo vědeckých textech, tak se z nejasností ohledně velikosti předpon kilo, mega a giga můžete tak akorát střelit do hlavy.
 
-Mezinárodní standardizační komise IEC se proto v roce 1998 rozhodla udělat ve věcech pořádek. V podstatě řekla, že předpony kilo, mega a giga by se měli používat pro násobky 1000 jako ve všech ostatních oborech. Pro násobky 1024 pak zavedli speciální veselé předpony kibi, mebi a gibi. Kibi (KiB) od spojení _kilo binary_, mebi (MiB) od _mega binary_ atd. Oznančení pro násobky 1024 tedy vypadá takto:
+[Mezinárodní standardizační komise IEC](https://www.iec.ch) se proto v roce 1998 rozhodla udělat ve věcech pořádek. V podstatě řekla, že předpony kilo, mega a giga by se měly používat pro násobky 1000 jako ve všech ostatních oborech, kde jsou lidé ještě při smyslech. Pro násobky 1024 pak zavedli speciální veselé a hravé předpony _kibi_, _mebi_ a _gibi_. Kibi (KiB) od spojení _kilo binary_, mebi (MiB) od _mega binary_ atd. Smysluplné oznančení pro násobky 1024 tedy vypadá takto:
 
 - 1 KiB = 1024 B
 - 1 MiB = 1024 KiB
 - 1 GiB = 1024 MiB
 
-Správně by tedy výrobci RAM pamětí měli uvádět jejich kapacitu v jednotkách GiB místo GB. Většina z nich na to ale samozřejmě kašle. Zároveň pperátoři by měli uvádět rychlosti připojení k internetu v jednotkách Mb/s a myslet tím 1 000 000 bitů za sekundu. Jestli to ale tak skutečně myslí ví jen Bůh nebo v lepším případě marketingové oddělení.
+Správně by tedy výrobci RAM pamětí měli uvádět jejich kapacitu v jednotkách GiB místo GB. Většina z nich na to ale samozřejmě kašle. Zároveň operátoři by měli uvádět rychlosti připojení k internetu v jednotkách Mb/s a myslet tím 1&nbsp;000&nbsp;000 bitů za sekundu. Jestli to ale tak skutečně myslí ví jen Bůh nebo v lepším případě jejich marketingové oddělení.
 
 
 
