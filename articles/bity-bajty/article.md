@@ -121,12 +121,12 @@ Když si tedy například slavnostně do svého počítače koupíte pamět RAM 
 
 Zmatení však, milé děti, nekončí. Když totiž data přenášíme po síti, používáme jednotky odvozené od bitů. Základní jednotkou je tedy jeden bit, který značíme malým písmenem b. Pro větší objemy dat pak používáme násobky jako kb (kilobit), Mb (megabit) nebo Gb (gigabit). Lidé od telekomunikací nemusí řešit žádné technologie kolem adresování pamětí, takže většinou počítají jeden kilobit standardně jako 1000 bitů, jeden megabit jako 1000 kilobitů a tak dále. 
 
-Například český operátor Vodafon v době psaní tohoto článku nabízí tři tarify pro domácí internet s rychlostmi 250 Mb/s, 500 Mb/s a 1 Gb/s. To znamená, že v nejpomalejším tarifu můžete přenést 250&nbsp;000&nbsp;000 bitů za sekundu. Když toto číslo vydělíme osmi, dostaneme 31&nbsp;250&nbsp;000 bajtů za sekundu, což je
+Například český operátor Vodafone v době psaní tohoto článku nabízí tři tarify pro domácí internet s rychlostmi 250 Mb/s, 500 Mb/s a 1 Gb/s. To znamená, že v nejpomalejším tarifu můžete přenést 250&nbsp;000&nbsp;000 bitů za sekundu. Když toto číslo vydělíme osmi, dostaneme 31&nbsp;250&nbsp;000 bajtů za sekundu, což je
 
 - 31.25 MB/s pokud počítáme v násobcích 1000, nebo
 - 29.8 MB/s pokud počítáme v násobcích 1024.
 
-::fig[[Stránky společnosti Vodafon](https://www.vodafone.cz/internet), červen 2024]{src=assets/vodafon.png}
+::fig[[Stránky společnosti Vodafone](https://www.vodafone.cz/internet), červen 2024]{src=assets/vodafone.png}
 
 Teď bychom mohli být rozumní a pevně stanovit, že pro ukládání dat používáme násobky 1024 a pro přenos dat násobky 1000. Jenže to bychom žili ve světe, kdy jsou všechny bytůstky šťastny.
 
