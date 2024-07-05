@@ -150,4 +150,4 @@ Správně by tedy výrobci RAM pamětí měli uvádět jejich kapacitu v jednotk
 
 Po přečtení tohoto článku vám možná trochu vybuchuje hlava. Až vám trochu slehne, zjistíte, že už se docela dobře orientujete v tom, co to doopravdy znamená, že počítače pracují s nulami a jedničkami. Také už jste v podstatě experti na jednotky jako bity, bajty, kilobajty, mebibajty, gibibajty a podobné šílenosti.
 
-V příštím článku si povíme více o tom, [jak si nějaká skutečná data prohlédnout](https://kodim.cz/blog/clanky/hexkod) a proč k tomu proboha potřebujeme ještě další číselnou soustavu. 
+V příštím článku si povíme více o tom, [jak si nějaká skutečná data prohlédnout](https://kodim.cz/blog/clanky/hexkody) a proč k tomu proboha potřebujeme ještě další číselnou soustavu. 
