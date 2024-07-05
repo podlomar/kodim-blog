@@ -291,7 +291,7 @@ Barvy v CSS se zapisují v hexadecimálních kódech přesně tak, jak jsou ulo�
 
 ### ID záznamů
 
-V databázích i různě jinde často potřebujeme generovat unikátní IDčka pro záznamy nebo datové objekty. Například databáze MongoDB používá pro IDčka 12 bajtová čísla zapsaná v hexadecimální soustavě. Takové IDčko může vypadat například takto: `507f1f77bcf86cd799439011`.
+V databázích i různě jinde často potřebujeme generovat unikátní ID pro záznamy nebo datové objekty. Například databáze MongoDB používá pro IDčka 12 bajtová čísla zapsaná v hexadecimální soustavě. Takové ID může vypadat například takto: `507f1f77bcf86cd799439011`.
 
 ### V kryptografii
 
@@ -299,7 +299,7 @@ Při šifrování a digitálním podpisu se hex kódy používají pro zápis š
 
 O šifrování a hashování se víc dozvíte v dalších článcích.
 
-### Internatové adresy
+### Internetové adresy
 
 Ve standardu IPv6 se adresy počítačů v internetu zapisují jako osm skupin po čtyřech hexadecimálních číslicích oddělených dvojtečkou. Například `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
 
