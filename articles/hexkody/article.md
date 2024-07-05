@@ -1,6 +1,6 @@
 ---
 title: Binární data a hex kódy
-lead: Jak programátoři pracují s binárními daty, jak se binárně ukláadjí čísla a jak fungují tajemné hex kódy
+lead: Jak programátoři pracují s binárními daty, jak se binárně ukládají čísla a jak fungují tajemné hex kódy
 author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
@@ -175,7 +175,7 @@ Jako by všech těch soustav už nebylo tak akorát dost! Běžní smrtelníci p
 
 Občas se místo malých písmen používají písmena velká, takže uvidíte čísla jako `B3C` místo `b3c`. To je ale jen otázka vkusu, nemá to žádny praktický význam.
 
-Poslední řádek této tabulky skrývá důvod, proč si programátoři hexadecimální soustavu vlastně vybrali. Poslední dvojciferné číslo `ff`` je totiž nejvyšší hodnota, která se vejde do jednoho bajtu. Každý bajt se tak dá v šestnáctkové soustavě zapsat pomocí přesně dvou cifer. To se nám přávě bude hodit při výpisu binárních dat.
+Poslední řádek této tabulky skrývá důvod, proč si programátoři hexadecimální soustavu vlastně vybrali. Poslední dvojciferné číslo `ff` je totiž nejvyšší hodnota, která se vejde do jednoho bajtu. Každý bajt se tak dá v šestnáctkové soustavě zapsat pomocí přesně dvou cifer. To se nám přávě bude hodit při výpisu binárních dat.
 
 Pojďme vylepšit náš výpis smajlíka. Všechny bajty převedeme do hexadecimální soustavy a naskládáme 16 bajtů na řádek. Začátky řádků budeme číslovat také v hexadecimální soustavě. Výpis pak dopadne takto:
 
@@ -234,7 +234,7 @@ Pojďme vylepšit náš výpis smajlíka. Všechny bajty převedeme do hexadecim
 032f: ff ff ff ff ff ff
 ```
 
-Přestože tento kus textu vypadá jako úvodní znělka z filmu Matrix, je to mnohem přehlednější forma, jak se podívat na binární data, než vypisovat samotné nuly a jedničky. 
+Přestože tento kus textu vypadá jako úvodní znělka z filmu Matrix, je to mnohem přehlednější forma, jak se podívat na binární data, než vypisovat samotné nuly a jedničky. Navíc si pře čtení takového zápisu můžete připadat jako opravdový hacker. Ještě se naučit trochu toho kung-fu...
 
 ::fig{src=assets/matrix.jpg}
 
@@ -306,3 +306,14 @@ Ve standardu IPv6 se adresy počítačů v internetu zapisují jako osm skupin p
 
 Starší formát IPv4, který jste jistě už někde zahlédli, ještě hex čísla nepoužíval a psaly se  4 bajty v desítkové soustavě oddělené tečkami. Například IPv4 adresa `206.189.61.50` patří serveru, na kterém běží tento web.
 
+## Hex editor
+
+Pokud se sami chcete podívat na binární data nějakého souboru, můžete k tomu použít nějaky hex editor. Například VS Code má rozšíření z názevm _Hex Editor_, které vám umožní zobrazit soubor v hexadecimální podobě. Existuje ale i spousta samostatných programů, které se specializují na práci s binárními daty.
+
+- [Hex Fiend pro maxOS](https://ridiculousfish.com/hexfiend/)
+- [Různé hex editory](https://apps.microsoft.com/search?query=hex+editor) v Microsoft Store
+- [Editory pro Linux](https://www.tecmint.com/best-hex-editors-for-linux/) jak s grafickým, tak příkazovým rozhraním
+
+## Závěr
+
+V tomto článku jste viděli, jak se můžeme podívat na binární data pomocí hexadecimální soustavy a jak se binárně ukládají čísla v big endian a little endian pořadí. Přiště si povíme o tom, jak počítače pracují s textem.

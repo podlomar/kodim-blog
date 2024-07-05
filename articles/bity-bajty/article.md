@@ -146,6 +146,8 @@ Pokud však jste někdo, kdo chce přesně vyjadřovat objemy dat například v 
 
 Správně by tedy výrobci RAM pamětí měli uvádět jejich kapacitu v jednotkách GiB místo GB. Většina z nich na to ale samozřejmě kašle. Zároveň operátoři by měli uvádět rychlosti připojení k internetu v jednotkách Mb/s a myslet tím 1&nbsp;000&nbsp;000 bitů za sekundu. Jestli to ale tak skutečně myslí ví jen Bůh nebo v lepším případě jejich marketingové oddělení.
 
+## Závěr
 
+Po přečtení tohoto článku vám možná trochu vybuchuje hlava. Až vám trochu slehne, zjistíte, že už se docela dobře orientujete v tom, co to doopravdy znamená, že počítače pracují s nulami a jedničkami. Také už jste v podstatě experti na jednotky jako bity, bajty, kilobajty, mebibajty, gibibajty a podobné šílenosti.
 
-
+V příštím článku si povíme více o tom, [jak si nějaká skutečná data prohlédnout](https://kodim.cz/blog/clanky/hexkod) a proč k tomu proboha potřebujeme ještě další číselnou soustavu. 
