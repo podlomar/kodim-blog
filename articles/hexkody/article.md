@@ -1,11 +1,11 @@
 ---
-title: Binární data a hexa kódy
-lead: Vrhneme do praxe znalosti z předchozích dílů a naučíme se, jak počítače pracují s daty.
+title: Binární data a hex kódy
+lead: Jak programátoři pracují s binárními daty, jak se binárně ukláadjí čísla a jak fungují tajemné hex kódy
 author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
   avatar: https://avatars.githubusercontent.com/u/4608335
-date: 2024-07-03
+date: 2024-07-05
 draft: true
 ---
 
@@ -15,17 +15,19 @@ Tento článek je čtvrtým dílem několikadílné série pro začínající pr
 - [Ve druhém díle](https://kodim.cz/blog/clanky/ciselne-soustavy) jsme si vyprávěli příběh o číselných soustavách, díky kterému už tušíte, že počítače pracují v jiné soustavě než my lidé.
 - [Ve třetím díle](https://kodim.cz/blog/clanky/bity-bajty) jste konečně viděli, jak se data ukládají a přenášejí pomocí jedniček a nul.
 
-V tomto díle si povíme o tom, jak se s binárními daty v reálné praxi pracuje a co jsou to hexadecimální čísla
+Dnes si povíme o tom, jak se s binárními daty v reálné praxi pracuje a co jsou to hexadecimální čísla. Konečně se tak dozvíte například to, proč se barvy v CSS a jiných grafických programech často zapisují jako kódy typu `#ff64a1`.
 
 ## Binární data
 
-Jako běžné uživatelé všechna data konzumujeme v jejich přirozené formě. Napínavé texty čteme, audio podcasty se zájmem posloucháme, na obrázky spoře oděných slečen chlípně zíráme apod. Jak už víme, všechna tato data jsou nakonec jen nuly a jedničky. Jako programátoři se občas potřebujeme na data podívat přímo v této syrové podobě. Říkáme pak, že pracujeme s _binárními daty_.
+Jako běžní uživatelé všechna data konzumujeme v jejich přirozené formě. Napínavé texty si čteme, audio podcasty posloucháme při uklízení, na obrázky spoře oděných slečen chlípně zíráme a tak dále. Jak už víme, všechna tato data jsou nakonec jen brutální proudy nul a jedniček. Jako programátoři se občas potřebujeme na taková data podívat přímo v této syrové podobě. Říkáme pak, že pracujeme s _binárními daty_.
 
 Pro příklad si znovu prohlédněte našeho smajlíka z prvního článku.
 
 ::fig{src=assets/crazy-16.png}
 
-Rozlišení tohoto obrázku je 16x16 pixelů. Když jej uložíme ve formátu BMP, dostaneme soubor o velikosti 822 bajtů. Zkusme si takový soubor vypsat jako binární data. Na každý řádek vypíšeme 8 bajtů. Pro lepší orientaci každý řádek začneme pořadovým číslem bajtu, kterým na řádek začíná. Sazmořejmě jako správní programátoři začneme číslovat od nuly.
+Rozlišení tohoto obrázku je 16x16 pixelů. Zde je 16x zvětšený, abyste dobře viděli jednotlivé pixely. Když tento obrázek uložíme v dnes již trochu zastarelém formátu BMP, dostaneme soubor o velikosti 822 bajtů. Formát BMP použijeme proto, že nemá žádnou kompresi, což nám dost usnadní život. Výsledný soubor si můžete [stáhnout zde](assets/crazy-16.bmp).
+
+Když se chceme podívat, co náš soubor obsahuje, zobrazíme si jej jako binární data. Na každý řádek vypíšeme 8 bajtů. Pro lepší orientaci každý řádek uvedeme pořadovým číslem bajtu, kterým řádek začíná. Samozřejmě jako správní programátoři číslujeme od nuly.
 
 ```
   0: 01000010 01001101 00110110 00000011 00000000 00000000 00000000 00000000
@@ -137,9 +139,9 @@ Přestože jsme se snažili si hodně pomoct číslováním a mezerami, dívat s
 
 ## Hexadecimální čísla
 
-Jako by všech těch soustav už nebylo dost! Běžní smrtelníci počítají v desítkové soustavě, vzpurní Moraváci ve dvanáctkové, Simpsonovi možná v osmičkové a počítače ve dvojkové. Programátorům je to však evidentně málo a zavedli ještě _šestnáctkovou_ nebo-li _hexadecimální_ soustavu. 
+Jako by všech těch soustav už nebylo tak akorát dost! Běžní smrtelníci počítají v desítkové soustavě, vzpurní Moraváci ve dvanáctkové, Simpsonovi možná v osmičkové a počítače ve dvojkové. Programátorům je to však evidentně pořád málo a zavedli ještě _šestnáctkovou_ nebo-li _hexadecimální_ soustavu. 
 
-Šestnáctková soustava má, jak už název napovídá, šestnáct cifer. Z našeho příběhu o Moravácích už jistě chápete, že bude potřeba vymyslet extra symboly pro cifry větší než 9. Abychom měli život jednoduchý, použijeme prostě písmena abecedy. Čísla v hexadecimální soustavě pak vypadají takto:
+Šestnáctková soustava má, jak už název napovídá, šestnáct cifer. Z našeho příběhu o Moravácích už jste zkušení a víte, že bude potřeba vymyslet extra symboly pro cifry větší než 9. Abychom měli život jednoduchý, použijeme prostě písmena abecedy. Čísla v hexadecimální soustavě pak vypadají takto:
 
 | Zápis | Desítkově |
 |-------|-----------|
@@ -171,7 +173,9 @@ Jako by všech těch soustav už nebylo dost! Běžní smrtelníci počítají v
 | fe    | 254       |
 | ff    | 255       |
 
-Poslední řádek této tabulky skrývá důvod, proč si programátoři hexadecimální soustavu vlastně vybrali. Poslední dvojciferné číslo `ff`` je totiž nejvyšší hodnota, která se vejde do jednoho bajtu. Každý bajt se tak dá v šestnáctkové soustavě zapsat pomocí přesně dvou cifer. To se nám bude hodit právě při výpisu binárních dat.
+Občas se místo malých písmen používají písmena velká, takže uvidíte čísla jako `B3C` místo `b3c`. To je ale jen otázka vkusu, nemá to žádny praktický význam.
+
+Poslední řádek této tabulky skrývá důvod, proč si programátoři hexadecimální soustavu vlastně vybrali. Poslední dvojciferné číslo `ff`` je totiž nejvyšší hodnota, která se vejde do jednoho bajtu. Každý bajt se tak dá v šestnáctkové soustavě zapsat pomocí přesně dvou cifer. To se nám přávě bude hodit při výpisu binárních dat.
 
 Pojďme vylepšit náš výpis smajlíka. Všechny bajty převedeme do hexadecimální soustavy a naskládáme 16 bajtů na řádek. Začátky řádků budeme číslovat také v hexadecimální soustavě. Výpis pak dopadne takto:
 
@@ -230,22 +234,75 @@ Pojďme vylepšit náš výpis smajlíka. Všechny bajty převedeme do hexadecim
 032f: ff ff ff ff ff ff
 ```
 
-Přestože tento kus textu vypadá jako úvodní znělka filmu Matrix, je to mnohem přehlednější forma, jak se podívat na binární data, než vypisovat samotné nuly a jedničky. 
+Přestože tento kus textu vypadá jako úvodní znělka z filmu Matrix, je to mnohem přehlednější forma, jak se podívat na binární data, než vypisovat samotné nuly a jedničky. 
+
+::fig{src=assets/matrix.jpg}
 
 ## Kódování čísel a endianita
 
-V tomto článku se úplně nechceme zabývat tím, jak přesně funguje formát obrázků BMP. Když už ho tady ale máme, můžeme si na něm ukázat, jak fungují některé technické věci okolo ukládání čísel. Dost často totiž chceme v binárních datech ukládat růžná čísla větší než 255. Může jít například o rozměry obrázku, jeho velikost v bajtech apod.
+V tomto článku se úplně nechceme zabývat tím, jak přesně funguje formát obrázků BMP. Když už ho tady ale máme, můžeme si na něm ukázat, jak fungují některé technické věci okolo ukládání čísel. Dost často totiž chceme v binárních datech ukládat různá čísla větší než 255. V našem příkladu může jít například o rozměry obrázku, jeho velikost v bajtech apod.
 
-Na první pohled se zdá, že by to nemusel být žádný velký problém. Prostě každé takové číslo převedeme do dvojkové soustavy a rozsekáme na bajty. Například velikost našeho souboru se smajlíkem je 822 bajtů. Číslo 822 v binární soustavě vypadá jako 1100110110. Když jej rozsekneme na dva bajty, dostaneme `00000011 00110110`. V hexadecimální soustavě to bude `03 36`.
+Na první pohled se zdá, že by to nemusel být žádný velký problém. Prostě každé takové číslo převedeme do dvojkové soustavy a rozsekáme na bajty. Například velikost našeho souboru se smajlíkem je 822 bajtů. Číslo 822 se v binární soustavě zapíše jako 1100110110. Když jej rozsekneme na dva bajty, dostaneme `00000011 00110110`. V hexadecimální soustavě to bude `03 36`.
 
-Pokud chceme číslo 822 uložit do paměti, uložíme prostě tyto dva bajty. Tomuto způsobu uložení se říká _big endian_. A zde nás opět čeká pořádný podraz. Z toho, že tento postup ukládání má své jméno už asi tušíte, že existuje ještě jiná možnost. Bajty totiž můžeme zapisovat také v **obráceném pořadí**. Číslo 822 pak uložíme jako `36 03`. Tento způsob se jmenuje _little endian_. Nebudu se divit, když vás napadne otázka, proč proboha existují dva různé způsoby, jak ukládat čísla?
+Pokud chceme číslo 822 uložit do paměti, uložíme prostě tyto dva bajty. Tomuto způsobu uložení se říká _big endian_. Tady nás ale zase čeká pořádný podraz. Z toho, že tento zápis má své jméno už asi tušíte, že existuje ještě jiná možnost. Bajty totiž můžeme zapisovat také v **obráceném pořadí**. Číslo 822 pak uložíme jako `36 03`. Tento způsob se jmenuje _little endian_. Nebudu se divit, když vás mírně rozčílí, že existují dva různé způsoby, jak ukládat čísla.
+
+Opět to má své historické důvody. Po síti se většinou data posílají ve formátu _big endian_. Naopak většina procesorů ukládá a čte data v _little endian_ formátu. Pojmy big endian a little endian zavedl v roce 1980 programátor Danny Cohen ve svém článku [On Holy Wars and a Plea for Peace](https://ieeexplore.ieee.org/document/1667115) a pojmenoval je podle boje mezi dvěma frakcemi v románu Gulliverovy cesty. Základní konflikt příběhu stojí na tom, že jedni rozbíjejí skořápku vařeného vejce z většího konce (big end) a druzí z menšího konce (little end).
+
+::fig[Barevný tisk z vydání Gulliverových cest z roku 1860]{src=assets/gulliver.jpg}
 
 ## Rozluštění BMP souboru
 
-V tomto článku se určitě nechceme do podrobna zabývat strukturou BMP obrázků. Můžeme si ale i tak ukázat, co zajímavého si lze v tomto výpisu přečíst.
+Teď, když už víme, jak to chodí mezi liliputy, můžeme lépe nahlédnout pod pokličku našeho BMP souboru se smajlíkem. 
 
-- Všechny BMP soubory začínají dvěma bajty `42 4d`. To aby šlo rychle poznat, že soubor je BMP obrázek.
-- Následující 4 bajty udávají velikost celého souboru. V našem případě `36 03 00 00`, což je číslo 822 zakódované v little endian pořadí.
-- Dalších 48 bajtů obsahuje různé technické intormace, které pro teď přeskočíme. Tyto informaci končí na 4 řádku našeho výpisu šesti nulovými bajty.
-- Poté hned následující bajty obsahují samotný obrázek. Každy pixel je uložen jeko tři bajty, které udávají jeho RGB barvu. 
+Prvních 54 bajtů jsou takzvané :term{cs=hlavičky en=headers}. Ty obsahují různé technické informace o celém obrázku. 
+
+```
+0000: 42 4d 36 03 00 00 00 00 00 00 36 00 00 00 28 00
+000f: 00 00 10 00 00 00 10 00 00 00 01 00 18 00 00 00
+001f: 00 00 00 03 00 00 13 0b 00 00 13 0b 00 00 00 00
+002f: 00 00 00 00 00 00
+```
+
+- Všechny BMP soubory začínají dvěma bajty `42 4d`. To aby různé programy rychle poznaly, že soubor je BMP obrázek.
+- Následující 4 bajty udávají velikost celého souboru. V našem případě `36 03 00 00`, což je číslo 822 zakódované v little endian pořadí. Ja zapsáno jako 4 bajty, abychom měli místo na velké obrázky.
+- Dalších 48 bajtů obsahuje různé technické informace, jako šířku a výšku obrázku, počet barev apod. Tyto informace pro teď přeskočíme.
+
+Po hlavičkách následuje samotný obrázek. Zde jsou uloženy barvy pro jednotlivé pixely. Každý pixel je uložen jako tři bajty, které udávají barevné složky: červenou, zelenou a modrou. 
+
+```
+002f:                   ff ff ff ff ff ff ff ff ff ff
+003f: ff ff ff ff ff fd fe fe ee ed fb cc c2 f8 c3 b7
+004f: f7 dc d7 f9 fb fb fe ff ff ff ff ff ff ff ff ff
+005f: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff fc
+006f: fd fe da e4 f2 9f b8 df a0 93 f4 a4 86 fd a5 87
+...
+```
+
+Vidíme, že prvních 5 pixelů má barvu `ff ff ff`, tedy všechny složky na maximum. To je čistě bílá barva, jak si můžete ověřit pohledem na obrázek smajlíka níže. Další pixel má barvu `fd fe fe`, což je velmi světle šedivá. Takto můžeme pokračovat až do konce souboru.
+
+::fig{src=assets/crazy-16.png}
+
+## Kde všude se potkáme s hexakódy?
+
+Hexadecimální soustavu zde nevysvětlujeme jen tak pro srandu králíkům. V programování ji potkáte na každém kroku. Jen jste si toho možná do teď tolik nevšimali.
+
+### Barvy v HTML a CSS
+
+Barvy v CSS se zapisují v hexadecimálních kódech přesně tak, jak jsou uloženy v binárních souborech. Například oranžová se v CSS zapíše jako `#ff7f00`. Rovnou tedy vidíte obsahy jednotlivých bajtů pro červenou, zelenou a modrou složku.
+
+### ID záznamů
+
+V databázích i různě jinde často potřebujeme generovat unikátní IDčka pro záznamy nebo datové objekty. Například databáze MongoDB používá pro IDčka 12 bajtová čísla zapsaná v hexadecimální soustavě. Takové IDčko může vypadat například takto: `507f1f77bcf86cd799439011`.
+
+### V kryptografii
+
+Při šifrování a digitálním podpisu se hex kódy používají pro zápis šifrovacích klíčů a hashů. Pokud jste weboví vývojáři, jistě jste už někdy viděli soubor pojmenovaný jako `bundle-c3a1924e.js`. Hex číslo v názvu je hash souboru, který se používá pro ověření, že se soubor nezměnil od posledního stažení.
+
+O šifrování a hashování se víc dozvíte v dalších článcích.
+
+### Internatové adresy
+
+Ve standardu IPv6 se adresy počítačů v internetu zapisují jako osm skupin po čtyřech hexadecimálních číslicích oddělených dvojtečkou. Například `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+
+Starší formát IPv4, který jste jistě už někde zahlédli, ještě hex čísla nepoužíval a psaly se  4 bajty v desítkové soustavě oddělené tečkami. Například IPv4 adresa `206.189.61.50` patří serveru, na kterém běží tento web.
 
