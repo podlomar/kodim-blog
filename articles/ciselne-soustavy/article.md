@@ -5,12 +5,13 @@ author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
   avatar: /avatars/martin-podloucky.jpg
+series: computer-data
 date: 2024-04-04
 ---
 
-Toto je druhý díl série článků o tom, jak se ukládají a přenášejí data mezi počítači. V [prvním díle](/blog/clanky/prace-s-daty) jsme si letem světem pověděli o tom, jak všechna data v počítači jsou v zásadě jen kupa čísel. Teď přišel čas na malou oddechovou pohádku o číselných soustavách, než se naplno vrhneme do hlubin nul a jedniček, bitů a bajtů.
-
-Pokud už něco a číselných soustavách víte, například ze školy nebo z profesní zkušenosti, tento článek pro vás nejspíš bude jen takové osvěžení pojmů. Pokud naopak vůbec netušíte, která bije, náš malý příběh vám snad ulehčí vstup do oblasti, která je jinak už lehce abstraktní a je v ní, hrůzo, hrůzo, potřeba i malinká špetka matematiky.
+:::summary
+Počítače pracují s čísly dost jinak, než jsme my lidé zvyklí. Už od mala jsme se všichni ve školu učíli počítat v takzvané **desítkové soutavě**, protože prostě máme na rukou deset prstů. Toto však rozhodně není jediná možnost jak úspěšně provozovat aritmetiku. Abychom se lépe naladili na různé jiné číselné soustavy, které se nám budou hodit v programování, představíme si nejdříve lehce humorně soustavu **dvanáctkovou**. Ta k počítání používá dvanáct cifer místo deseti. A zvládneme to i bez toho, aby nám na každé ruce narostl nový prst.
+:::
 
 ## Pohádka začíná
 
