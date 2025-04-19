@@ -1,0 +1,15 @@
+title: Počítače a data
+lead: Jak počítače pracují s daty, nuly, jedničky, bity a bajty
+parts:
+  - link: prace-s-daty
+    title: Jak počítače pracují s daty
+    lead: Úvod o tom, že všechny druhy dat jsou jen hromady malých čísel.
+  - link: ciselne-soustavy
+    title: Číselné soustavy
+    lead: Trochu praštěný příběh o dvanáctkové soustavě, abyste si zvykli na různé číselné soustavy.
+  - link: bity-bajty
+    title: Co jsou to bity a bajty
+    lead: Jak počítače všechno převádějí na nuly, jedničky, bity a bajty.
+  - link: hexkody
+    title: Binární data a hex kódy
+    lead: Jak lidsky číst a zapisovat kusy dat, abychom nemuseli přímo používat nuly a jedničky.

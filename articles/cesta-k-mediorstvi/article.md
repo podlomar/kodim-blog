@@ -4,7 +4,7 @@ lead: Cesta Evči, absolventky Czechitas DA Web, od juniora k mediorovi a někol
 author:
   name: Evča Machová
   link: https://www.linkedin.com/in/eva-machova-frontend-developer
-  avatar: https://media.licdn.com/dms/image/D5603AQFmKr3amdTKWw/profile-displayphoto-shrink_200_200/0/1681640629610?e=1723680000&v=beta&t=UIz-CJ17PVZY5HPsQRLtiB5Czd7ag6HYO7gowp1urRk
+  avatar: /avatars/eva-machova.jpg
 date: 2024-03-17
 ---
 

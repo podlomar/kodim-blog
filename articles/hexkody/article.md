@@ -4,19 +4,14 @@ lead: Jak programátoři pracují s binárními daty, jak se binárně ukládaj�
 author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
-  avatar: https://avatars.githubusercontent.com/u/4608335
+  avatar: /avatars/martin-podloucky.jpg
+series: computer-data
 date: 2024-07-05
 ---
 
-Tento článek je čtvrtým dílem několikadílné série pro začínající programátory o tom, jak počítače pracují s daty.
-
-- [V prvním díle](https://kodim.cz/blog/clanky/prace-s-daty) jste se dozvěděli, že všechny možné druhy dat jsou vždy jen hromady malých čísel.
-- [Ve druhém díle](https://kodim.cz/blog/clanky/ciselne-soustavy) jsme si vyprávěli příběh o číselných soustavách, díky kterému už tušíte, že počítače pracují v jiné soustavě než my lidé.
-- [Ve třetím díle](https://kodim.cz/blog/clanky/bity-bajty) jste konečně viděli, jak se data ukládají a přenášejí pomocí jedniček a nul.
+## Binární data
 
 Dnes si povíme o tom, jak se s binárními daty v reálné praxi pracuje a co jsou to hexadecimální čísla. Konečně se tak dozvíte například to, proč se barvy v CSS a jiných grafických programech často zapisují jako kódy typu `#ff64a1`.
-
-## Binární data
 
 Jako běžní uživatelé všechna data konzumujeme v jejich přirozené formě. Napínavé texty si čteme, audio podcasty posloucháme při uklízení, na obrázky spoře oděných slečen chlípně zíráme a tak dále. Jak už víme, všechna tato data jsou nakonec jen brutální proudy nul a jedniček. Jako programátoři se občas potřebujeme na taková data podívat přímo v této syrové podobě. Říkáme pak, že pracujeme s _binárními daty_.
 

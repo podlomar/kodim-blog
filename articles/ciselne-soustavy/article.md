@@ -4,7 +4,7 @@ lead: Malá pohádka o tom, co jsou to číselné soustavy a proč je potřebuje
 author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
-  avatar: https://avatars.githubusercontent.com/u/4608335
+  avatar: /avatars/martin-podloucky.jpg
 date: 2024-04-04
 ---
 

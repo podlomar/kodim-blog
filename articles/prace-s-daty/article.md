@@ -4,11 +4,18 @@ lead: Jak počítače převádějí texty, obrázky, video nebo audio na čísla
 author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
-  avatar: https://avatars.githubusercontent.com/u/4608335
+  avatar: /avatars/martin-podloucky.jpg
+series: computer-data
 date: 2024-03-17
 ---
 
-Tento článek začiná několikadílnou sérii pro začínající programátory, kteří se chtějí zorientovat v tom, jak počítače interně pracují s daty. 
+:::summary
+Počítače jsou v podstatě jen **hrozně rychlé kalkulačky**, umí tedy nakonec pracovat jen s čísly. Pokud chceme, aby zobrazovaly text i obrázky, přehrávaly audio nebo třeba streamovaly video, musíme všechna tato data převést nějakým způsobem na čísla. 
+
+Tímto článkem začínáme sérii pro začínající programátory, ve které si všechno vysvětlíme pěkně **názorně a od základů**.
+:::
+
+## Data uvnitř počítače
 
 Během svojí práce nebo studia jste už možná narazili na některé z těchto problémů:
 

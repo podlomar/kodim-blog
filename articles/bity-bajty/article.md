@@ -1,19 +1,21 @@
 ---
 title: Co jsou to bity a bajty
-lead: Proč se říká, že počítače pracují s nulami a jedničkami a co jsou to bity, bajty nebo kibibajty.
+lead: Proč se říká, že počítače pracují s nulami a jedničkami a co jsou to bity, bajty nebo dokonce jakési kibibajty.
 author:
   name: Martin Podloucký
   link: https://www.linkedin.com/in/martin-podlouck%C3%BD-5b415268
-  avatar: https://avatars.githubusercontent.com/u/4608335
+  avatar: /avatars/martin-podloucky.jpg
+series: computer-data
 date: 2024-06-15
 ---
 
-Tento článek je třetím dílem několikadílné série pro začínající programátory o tom, jak počítače pracují s daty.
+:::summary
+Počítače nevidí texty, zvuky, obrázky nebo videa tak jako my. Pro ně je všechno jen nekonečná řada nul a jedniček.
 
-- [V prvním díle](https://kodim.cz/blog/clanky/prace-s-daty) jste se dozvěděli, že všechny možné druhy dat jsou vždy jen hromady malých čísel.
-- [Ve druhém díle](https://kodim.cz/blog/clanky/ciselne-soustavy) jsme si vyprávěli příběh o číselných soustavách, díky kterému už tušíte, že počítače pracují v jiné soustavě než my lidé.
+Těmto jedničkám a nulám říkáme **bity**. Když jich poskládáme osm, máme **bajt**. Z bajtů pak skládáme **kilobajty**, **megabajty** nebo **gigabajty** – tedy jednotky, které jistě znáte z popisků velikosti souborů nebo paměti.
 
-Máme tak všechno krásně přichystáno, abychom se konečně dostali k jádru pudla a rozkryli, co se skrývá za často omýlaným tvrzením, že **počítače pracují s nulami a jedničkami**.
+A pokud mluvíme o rychlosti přenosu dat, používáme **kilobity**, **megabity** a **gigabity**.
+:::
 
 ## Skladování a přenos dat
 
@@ -36,7 +38,7 @@ Pokud chceme naopak data efektivně přenášet z místa na místo, používáme
 - optické kabely pro rychlé přenosy dat v rámci počítačových sítí,
 - satelitní spoje pro přenos dat mezi kontinenty (například Starlink od SpaceX),
 
-Teď to skoro vypadá, že vás ze všech těchto technologií čeká nějaká drsná zkouška. Nebojte! Tento výčet uvádíme jen pro představu, jak různorodé všemožné technologie můžou být. Pokud chceme najít dobrý způsob pro kódování dat jak pro ukládání tak pro přenus, musíme vymyslet něco opravdu univerzálního a hlavně jednoduchého.
+Teď to skoro vypadá, že vás ze všech těchto technologií čeká nějaká drsná zkouška. Nebojte! Tento výčet uvádíme jen pro představu, jak různorodé všemožné technologie můžou být. Pokud chceme najít dobrý způsob pro kódování dat jak pro ukládání tak pro přenos, musíme vymyslet něco opravdu univerzálního a hlavně jednoduchého.
 
 ## Jedničky a nuly
 
