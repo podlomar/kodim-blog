@@ -9,29 +9,27 @@ date: 2025-06-06
 ---
 
 :::summary
-V tomhle článku se podělím o konkrétní příběh optimalize reálné React aplikace – od hromady uživatelských stížností až po **výrazné zrychlení renderování**. Ukážu vám, jak 
+V tomhle článku se podělím o konkrétní příběh optimalize React aplikace – od hromady uživatelských stížností na začátku až po **snížení času renderování na pětinu**. Ukážu vám, jak
 
 - pomocí profileru odhalit bottlenecky,
 - přeskládat správu stavu,
-- přesunut logiku blíže ke komponentám nebo
+- přesunut logiku blíž ke komponentám nebo
 - nasadit React signály místo klasického contextu.
 
 Jestli hledáte praktické rady, jak zkrotit přerenderování v náročnější React appce, čtěte dál!
 :::
 
-Aplikace, na které už několik let pracuji, a která s každým produkčním releasem přisype hromadu nových cool funkcí, už pár optimalizačních issues zažila. Vždy to byly spíš očividné bugy, kde se nově zaneslo nějaké výrazné zpomalení. Za ty roky se ale pomaličku, plíživě, s každou novou řadou komponent zvětšoval technický dluh – tady jenom ještě jedna věc sahající na context, tady ještě jeden stav, tady jenom další komponenta, která se bude překreslovat s každou akcí uživatele… Až najednou prásk, hromadí se stížnosti, a některé úkony s větším množstvím dat vyžadují velké množství trpělivosti. Dostala jsem dárek, co máme [my programátoři, správci](https://zdrojak.cz/clanky/kolonizatori-spravci-kolonii/#:~:text=Zat%C3%ADmco%20koloniz%C3%A1tor%20ne%C5%A1el%20daleko%20pro,p%C4%9Btkr%C3%A1t%20m%C4%9B%C5%99%C3%AD%2C%20ne%C5%BE%20n%C4%9Bco%20u%C5%99%C3%ADzne.) velmi rádi – zelenou od produktu pro refaktoring! Krásný sprint a půl hraní si a měření, ze kterého jsem si odnesla následujících pět kroků, které výrazně pomohly ke zmíněnému happy endu bez nutnosti drastickým způsobem překopat architekturu. 
+Aplikace, na které už v práci několik let pracuji, a která s každým produkčním releasem přisype hromadu nových cool funkcí, už pár optimalizačních issues zažila. Vždy to byly spíš očividné bugy, kde se nově zaneslo nějaké výrazné zpomalení. Za ty roky se ale pomaličku, plíživě, s každou novou řadou komponent zvětšoval technický dluh – tady jenom ještě jedna věc sahající na context, tady ještě jeden stav, tady jenom další komponenta, která se bude překreslovat s každou akcí uživatele… Až najednou prásk, hromadí se stížnosti, a některé úkony s větším množstvím dat vyžadují velké množství trpělivosti. Dostala jsem dárek, co máme [my programátoři, správci](https://zdrojak.cz/clanky/kolonizatori-spravci-kolonii/#:~:text=Zat%C3%ADmco%20koloniz%C3%A1tor%20ne%C5%A1el%20daleko%20pro,p%C4%9Btkr%C3%A1t%20m%C4%9B%C5%99%C3%AD%2C%20ne%C5%BE%20n%C4%9Bco%20u%C5%99%C3%ADzne.) velmi rádi – zelenou od produktu pro refaktoring! Krásný sprint a půl hraní si a měření, ze kterého jsem si odnesla následujících pět kroků, které výrazně pomohly ke zmíněnému happy endu bez nutnosti drastickým způsobem překopat architekturu. 
 
-::fig[Statečný boj s Reactem (credit: [Midjourney](https://www.midjourney.com))]{src=assets/react-fight.jpg}
+::fig[Hurá do boje (credit: [Midjourney](https://www.midjourney.com))]{src=assets/react-fight.jpg}
 
 ## 1. Identifikování problému – React profiler
 
 Krok jedna u debuggování jakéhokoliv problému je jasný – je třeba zjistit, kde problém je. Na pomoc přichází [**React Developer Tools**](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) a jejich záložka **Profiler**, kde je vidět vše, co může daný bottleneck způsobovat. Ovládání je jednoduché – začnete nahrávat, provedete akci, která “je pomalá”, a pustíte se do zkoumání Flamegraph chartu. Pro ještě větší dokreslení problému (doslova) si v nastavení profileru můžete zapnout highlightování renderovaných komponent a uvidíte, kolik rámečků se vám v aplikaci vysvítí. 
 
-V případě naší aplikace to bylo hodně. Při změně v jedné části aplikace docházelo k překreslení většiny komponent a svítila skoro celá stránka. I když by bylo ideální dosáhnout vysvícení jenom toho jednoho změněného čtverečku, ukázalo se, že by to byl běh na příliš dlouhou trať, na který zase tolik času není. Začala jsem tedy postupovat od komponent, které zdržovaly nejvíce, a jejichž ubrání by mělo být na výkonu nejvíc vidět. V jednodušší aplikaci by šlo takové problematické komponenty najít v záložce Ranked chart, kde by byly navrchu s nejdelším časem renderu. V případě velkých aplikací se spoustou naimportovaných UI komponent (což byl můj případ) v Ranked chartu zabral první místa balast UI komponent, které byly samy o sobě relativně pomalé, ale nebyly tím hlavním problémem ve srovnání s velkými zbytečně vykreslenými podstromy mnoha menších komponent. ⬇️
+V případě naší aplikace to bylo opravdu hodně. Při změně v jednom místě docházelo k překreslení většiny komponent a na stránce svítilo skoro všechno. I když by bylo ideální dosáhnout vysvícení jenom toho jednoho změněného čtverečku, ukázalo se, že by to byl běh na příliš dlouhou trať, na který zase tolik času není. Začala jsem tedy postupovat od komponent, které zdržovaly nejvíce, a jejichž ubrání by mělo být na výkonu nejvíc vidět. V jednodušší aplikaci by šlo takové problematické komponenty najít v záložce Ranked chart, kde by byly navrchu s nejdelším časem renderu. V případě velkých aplikací se spoustou naimportovaných UI komponent (což byl náš případ) v Ranked chartu zabraly první místa komponenty jako Tooltip nebo Dropdown, které byly opravdu samy o sobě relativně pomalé, ale rozhodně nebyly tím hlavním problémem v porovnání s hlubokými stromy komponent, které se s každou změnou zbytečně re-renderovaly. ⬇️
 
-::fig[Flamegraph chart ukazující přerenderované komponenty a jejich čas. Žlutě vyznačená komponenta byla sice podle Ranked chartu nejpomalejší, ale její samotný čas renderu byl zanedbatelný oproti vyznačeným hlubokým stromům zbytečně vykreslených komponent a jejich potomků, jejichž čas se nasčítal na desítky milisekund.]{src=assets/flamegraph-1.png}
-
-Flamegraph chart ukazující přerenderované komponenty a jejich čas. Žlutě vyznačená komponenta byla sice podle Ranked chartu nejpomalejší, ale její samotný čas renderu byl zanedbatelný oproti vyznačeným hlubokým stromům zbytečně vykreslených komponent a jejich potomků, jejichž čas se nasčítal na desítky milisekund. 
+::fig[Flamegraph chart ukazující přerenderované komponenty a jejich čas. Žlutě vyznačený Tooltip byl sice podle Ranked chartu nejpomalejší, ale jeho samotný čas renderu byl zanedbatelný oproti skupinám komponent ohraničených červeně. Na nich bylo nejhorší to, že jejich re-render nedával smysl (komponenty jako Toolbar, Panel nebo Menu by nemělo rozhodit překreslení něčeho nesouvisejícího) a ještě měly navíc spoustu potomků.]{src=assets/flamegraph-1.png}
 
 U těchto orámovaných skupin komponent pak začala mravenčí práce – rozkliknout si u každé z nich rodiče navrchu,  podívat se na důvod přerenderování a ten následně prozkoumat i v kódu. Zde se ukázalo, že je těch důvodů vlastně pouze pár: 
 
@@ -44,7 +42,7 @@ První problém částečně vyřešil `useCallback()`(viz níže), u druhého j
 
 Základní chování React aplikace ([před verzí 19 s compilerem](https://react.dev/learn/react-compiler)), je **re-renderování komponenty při změně stavu a automatické re-renderování všech jejích dětí.** Tenhle pattern je užitečný, protože zajistí aktuální UI bez toho, aniž bychom se nadřeli. Když ale komponenta, která drží stav, časem nabobtná o spoustu dětí, které třeba nejsou nutně na tomto stavu závislé, dochází k jejich renderování zbytečně a snižuje se výkon aplikace.
 
-V mém případě se přesně toto stalo. Co s tím? 
+V našem případě se přesně toto stalo. Co s tím? 
 
 - Pokud **stav používá pouze část rodiče**, lze tuto **část vydělit na samostatnou komponentu**. Zpřehlední se kód rodičovské komponenty a nová menší komponenta si hezky spravuje svou zodpovědnost i se stavem. Re-renderuje se jen ona, když se daný stav změní.
 - V případě, kde stav potřebují dvě child komponenty, to je trochu složitější, ale obdobné – tyto **komponenty se obalí “wrapper” komponentou, která bude spravovat stav**. Zase se oddělí stav pouze k místu, kde se s ním opravdu pracuje, a re-renderuje se tak jen to, co je třeba.
