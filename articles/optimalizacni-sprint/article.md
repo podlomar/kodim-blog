@@ -220,8 +220,6 @@ Na konci došlo k **umazání prodrillovaných props** a hlavně k **drastickém
 
 ::fig[Flamegraph po implementaci signálů a osekání zbytečně renderovaných potomků.]{src=assets/flamegraph-3.png}
 
-Flamegraph po implementaci signálů a osekání zbytečně renderovaných potomků.
-
 ## 4. Svatá trojice – React.memo, useMemo, useCallback
 
 Někteří z vás si určitě u předchozího příkladu všimli problému – z logiky Reactu se musely přece všichni potomci Krakena re-renderovat, když se překreslil jejich rodič. Máte naprostou pravdu. Zatajila jsem ještě jeden poslední krok a to memoizování komponent [pomocí `Rect.memo`.](https://react.dev/reference/react/memo) To zařídí, že se **potomek re-renderuje pouze tehdy, když se změní jeho props**. Předejdeme tím defaultnímu React chování (před verzí 19), ale za cenu, že to je vlastně celkem otravné a může to být nepřehledné. Proč? Na tohle téma naráží i super článek [The Uphill Battle of Memoization](https://tkdodo.eu/blog/the-uphill-battle-of-memoization) a pokusím se ho krátce demonstrovat taky zde.
